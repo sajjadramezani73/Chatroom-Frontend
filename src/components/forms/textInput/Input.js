@@ -1,13 +1,11 @@
 
-import useValidation from '../../../hooks/useValidation';
 import { useEffect, useState } from 'react';
 import LoadSvgIcon from '../../../utils/LoadSvgIcon'
 
 const Input = ({
     iconName = "",
     type = 'text',
-    placeholder = " ",
-    title = "",
+    placeholder = "",
     rule = "",
     value = "",
     onChange,
@@ -21,17 +19,12 @@ const Input = ({
     const [inputValue, setInputValue] = useState('')
     const [error, setError] = useState(null)
     const clearInputValue = () => onChangeHandler('')
-    const { validate } = useValidation()
 
     useEffect(() => {
         setInputValue(value)
     }, [value])
 
     const onChangeHandler = (val) => {
-        if (rule) {
-            let { message } = validate({ rule: rule, value: val, errorMessage: errorMessage })
-            setError(message)
-        }
         onChange({
             target: {
                 value: val
@@ -40,7 +33,7 @@ const Input = ({
     }
 
     useEffect(() => {
-        if (value != '' && value?.length >= 0) {
+        if (value !== '' && value?.length >= 0) {
             if (error) {
                 haveError(true)
             } else {
@@ -54,7 +47,7 @@ const Input = ({
     return (
         <div className="py-2">
             <div className={`flex h-11 rounded-xl border items-center
-            ${error != null ? 'border-danger' : focused ? 'border-body' : (!!inputValue ? 'border-body' : '')}`}>
+            ${error != null ? 'border-danger' : focused ? 'border-gray-500' : (!!inputValue ? 'border-body' : '')}`}>
                 <div className='w-10 h-full flex justify-center items-center'>
                     <LoadSvgIcon name={iconName} size="16" />
                 </div>

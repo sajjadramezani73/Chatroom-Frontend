@@ -16,8 +16,11 @@ const SignUp = () => {
         confirmPassword: true
     });
     const [loading, setLoading] = useState(false);
-    const [btnDisabled, setBtnDisabled] = useState(true);
     /********** state ************/
+
+    const signupHandler = () => {
+
+    }
 
     return (
         <Fragment>
@@ -45,7 +48,7 @@ const SignUp = () => {
                 type='password'
                 placeholder="تکرار رمز عبور خود را وارد کنید"
                 iconName="passwordHide"
-                value={userData?.password}
+                value={userData?.confirmPassword}
                 onChange={e => setUserData({ ...userData, confirmPassword: e.target.value })}
                 rule="required"
                 errorMessage="رمز عبور خود را وارد کنید"
@@ -55,7 +58,8 @@ const SignUp = () => {
                 <Button
                     active={true}
                     title="ثبت نام"
-                    onClick={() => console.log('login')}
+                    onClick={signupHandler}
+                    loading={loading}
                 />
             </div>
         </Fragment>

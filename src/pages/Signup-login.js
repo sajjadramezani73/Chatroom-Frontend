@@ -36,7 +36,12 @@ const SignupLogin = () => {
                         </div>
                     </div>
                     <div className='linear-bg'>
-
+                        <div className='h-full flex flex-col justify-center px-10 text-white font-bold'>
+                            <p className='text-2xl mb-4'>ما فراتر از یک شرکت هستیم.</p>
+                            <p className='text-sm text-light leading-6'>این یکی از بزرگترین دنیاهای واقعیت مجازی و گفتگو آنلاین است. می‌توانید
+                                آواتار خود را بسازید و با افراد جدید ملاقات کنید
+                                و با هرکسی که می خواهید ارتباط برقرار نمایید.</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import Input from '../../components/forms/textInput/Input';
 import Button from '../../components/ui/button/Button';
 
@@ -14,11 +14,14 @@ const Login = () => {
         password: true
     });
     const [loading, setLoading] = useState(false);
-    const [btnDisabled, setBtnDisabled] = useState(true);
     /********** state ************/
 
+    const loginHandler = () => {
+
+    }
+
     return (
-        <Fragment>
+        <div className='mb-[60px]'>
             <Input
                 type='text'
                 placeholder="نام کاربری خود را وارد کنید"
@@ -43,10 +46,11 @@ const Login = () => {
                 <Button
                     active={true}
                     title="ورود"
-                    onClick={() => console.log('login')}
+                    onClick={loginHandler}
+                    loading={loading}
                 />
             </div>
-        </Fragment>
+        </div>
     )
 }
 

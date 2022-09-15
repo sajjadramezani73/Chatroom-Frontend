@@ -11,6 +11,7 @@ const customColors = {
   danger: '#FF3B3B',
   light: '#F9F9F9',
   black: '#111111',
+  body: '#181818',
 }
 
 module.exports = {
