@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import Checkbox from '../../components/forms/checkbox/Checkbox';
 import Input from '../../components/forms/textInput/Input'
 import Button from '../../components/ui/button/Button';
 
@@ -8,14 +9,21 @@ const SignUp = () => {
     const [userData, setUserData] = useState({
         mobile: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        gender: ''
     });
     const [error, setError] = useState({
         mobile: true,
         password: true,
-        confirmPassword: true
+        confirmPassword: true,
+        gender: true
     });
     const [loading, setLoading] = useState(false);
+    const [activeGender, setActiveGender] = useState('');
+    const [genders] = useState([
+        { id: 'male', title: 'مرد' },
+        { id: 'famale', title: 'زن' }
+    ]);
     /********** state ************/
 
     const signupHandler = () => {
@@ -54,6 +62,19 @@ const SignUp = () => {
                 errorMessage="رمز عبور خود را وارد کنید"
                 haveError={e => setError({ ...error, confirmPassword: e })}
             />
+            <div className='flex items-center mt-3 pr-2'>
+                {genders.map(item => {
+                    const checkedGender = item.id === activeGender ? true : false
+                    return <Checkbox
+                        title={item.title}
+                        checked={checkedGender}
+                        onClick={() => {
+                            setActiveGender(item.id)
+                            setUserData({ ...userData, gender: item.id })
+                        }}
+                    />
+                })}
+            </div>
             <div className="mt-5">
                 <Button
                     active={true}

@@ -183,18 +183,18 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
             //             />
             //         </svg>
             //     )
-            // case 'check':
-            //     return (
-            //         <svg width={size} height={size} viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            //             <path
-            //                 d="M2.66675 8.4067L5.8901 11.6334C6.02307 11.7617 6.20063 11.8334 6.38542 11.8334C6.5702 11.8334 6.74777 11.7617 6.88074 11.6334L13.3334 3.83337"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //         </svg>
-            //     )
+            case 'check':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.66675 8.4067L5.8901 11.6334C6.02307 11.7617 6.20063 11.8334 6.38542 11.8334C6.5702 11.8334 6.74777 11.7617 6.88074 11.6334L13.3334 3.83337"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                )
             // case 'doubleCheck':
             //     return (
             //         <svg width={size} height={size} viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
