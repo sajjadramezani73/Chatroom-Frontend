@@ -4,12 +4,14 @@ import SignupLogin from '../../pages/Signup-login'
 import Splash from '../../pages/Splash'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Home from '../../pages/Home';
 
 const Layout = () => {
     return (
         <React.Fragment>
             <Routes>
                 <Route path="/" element={<Splash />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/signup-login" element={<SignupLogin />} />
             </Routes>
 
