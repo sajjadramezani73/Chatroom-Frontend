@@ -1,5 +1,10 @@
 import service from "./Api";
 
+export const getIndex = async () => {
+    const res = await service.get('/api/application/index')
+    return res?.data;
+}
+
 export const signupUser = async (params) => {
     const res = await service.post(`/api/users/singup`, { ...params });
     return res?.data;

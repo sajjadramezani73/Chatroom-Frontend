@@ -1,7 +1,26 @@
-import React from 'react'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { getIndex } from '../services/queries'
 import LoadSvgIcon from '../utils/LoadSvgIcon'
 
 const Splash = () => {
+
+    const navigate = useNavigate()
+
+    const getIndexHandler = () => {
+        getIndex('/api/application/index')
+            .then(res => {
+                res.userValid === true ? navigate('/home') : navigate('/signup-login')
+            })
+            .catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            getIndexHandler()
+        }, 3000);
+    }, [])
+
     return (
         <div className='h-full bg-primary flex flex-col items-center justify-center'>
             <p className='text-sm text-white font-bold mb-2'>در حال راه اندازی ...</p>
