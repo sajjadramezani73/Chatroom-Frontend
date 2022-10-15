@@ -18,12 +18,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     screens: {
+      'xxs': '360px',
       'xs': '480px',
       'sm': '600px',
       'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      'lg': '992px',
+      'xl': '1024px',
+      '2xl': '1280px',
     },
     colors: {
       ...colors,
