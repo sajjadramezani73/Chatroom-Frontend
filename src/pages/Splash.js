@@ -1,15 +1,19 @@
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { getIndex } from '../services/queries'
+import { addUser } from '../store/userSlice'
 import LoadSvgIcon from '../utils/LoadSvgIcon'
 
 const Splash = () => {
 
+    const dispatch = useDispatch()
     const navigate = useNavigate()
 
     const getIndexHandler = () => {
         getIndex('/api/application/index')
             .then(res => {
+                res.user !== null ? dispatch(addUser(res.user)) : dispatch(addUser(null))
                 res.userValid === true ? navigate('/home') : navigate('/signup-login')
             })
             .catch(err => console.log(err))

@@ -5,10 +5,13 @@ import Input from '../../components/forms/textInput/Input';
 import Button from '../../components/ui/button/Button';
 import { loginUser } from '../../services/queries';
 import Cookies from 'js-cookie'
+import { useDispatch } from 'react-redux';
+import { addUser } from '../../store/userSlice';
 
 const Login = () => {
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     /********** state ************/
     const [userData, setUserData] = useState({
@@ -34,8 +37,9 @@ const Login = () => {
             password: userData.password,
         })
             .then(res => {
+                dispatch(addUser(res?.user));
                 setLoading(false)
-                Cookies.set('token', res.token)
+                Cookies.set('token', res?.token)
                 toast.success(res?.message)
                 navigate('/home')
             }).catch(err => {

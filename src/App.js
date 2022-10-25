@@ -1,8 +1,12 @@
+import { Provider } from "react-redux";
 import Layout from "./components/layout/Layout";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <Layout />
+    <Provider store={store}>
+      <Layout />
+    </Provider>
   );
 }
 
