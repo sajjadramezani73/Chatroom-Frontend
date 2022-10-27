@@ -9,7 +9,7 @@ const SignupLogin = () => {
     const [mode, setMode] = useState('login');
 
     return (
-        <div className="h-full bg-captionLight flex md:items-center justify-center signupLogin">
+        <div className="h-full bg-captionLight flex md:items-center justify-center rtl signupLogin">
             <div className='container mx-auto'>
                 <div className="bg-white shadow-card rounded grid grid-cols-1 md:grid-cols-2 overflow-hidden">
                     <div className=''>

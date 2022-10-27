@@ -86,7 +86,6 @@ body,
 }
 
 body {
-  direction: rtl;
   font-family: iranyekan;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -111,6 +110,14 @@ div {
 
 button:disabled {
   opacity: 0.5;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
 }
 
 .signupLogin .linear-bg {
