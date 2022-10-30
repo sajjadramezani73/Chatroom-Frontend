@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from '../../pages/Home';
 import PublicChat from '../../pages/PublicChat';
 import PrivateChat from '../../pages/PrivateChat';
+import UserEdit from '../../pages/UserEdit';
 
 const Layout = () => {
     return (
@@ -16,6 +17,7 @@ const Layout = () => {
                 <Route path="/home" element={<Home />} >
                     <Route index element={<PublicChat />} />
                     <Route path="privateChat/:userId" element={<PrivateChat />} />
+                    <Route path="userEdit/:userId" element={<UserEdit />} />
                 </Route>
                 <Route path="/signup-login" element={<SignupLogin />} />
             </Routes>

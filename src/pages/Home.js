@@ -33,7 +33,7 @@ const Home = () => {
                 <div className="bg-white w-[330px] rounded-md shadow p-4">
                     <UserInfo user={user?.user} />
                 </div>
-                <div className="bg-white grow rounded-md shadow">
+                <div className="bg-white grow rounded-md shadow p-4">
                     <Outlet />
                 </div>
             </div>

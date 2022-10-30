@@ -87,6 +87,70 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
                         />
                     </svg>
                 )
+            case 'dragDrop':
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width={size}
+                        height={size}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width={weight}
+                        stroke={color}
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                    </svg>
+                )
+            case 'trash':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 22 22" fill={fill} xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.83337 5.5H20.1667"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M18.1867 5.69238L17.2792 18.4616C17.2501 18.9265 17.0437 19.3625 16.7026 19.6797C16.3615 19.997 15.9117 20.1712 15.4459 20.1666H6.55423C6.08955 20.1676 5.64141 19.9942 5.29841 19.6807C4.95749 19.3628 4.75091 18.9267 4.7209 18.4616L3.81335 5.69238"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M11 8.8916V17.1416"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M13.75 9.78027V16.1969"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M8.25 9.78027V16.1969"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M9.16671 1.83301H12.8334C13.3185 1.83661 13.7827 2.03091 14.1257 2.37395C14.4688 2.71699 14.6631 3.18122 14.6667 3.66634V5.49967H7.33337V3.66634C7.33697 3.18122 7.5313 2.71699 7.87434 2.37395C8.21738 2.03091 8.68159 1.83661 9.16671 1.83301V1.83301Z"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                )
             // case 'passwordShow':
             //     return (
             //         <svg width={size} height={size + 1} viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,53 +508,7 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
             //                 /></g>
             //         </svg>
             //     )
-            // case 'trash':
-            //     return (
-            //         <svg width={size} height={size} viewBox="0 0 22 22" fill={fill} xmlns="http://www.w3.org/2000/svg">
-            //             <path
-            //                 d="M1.83337 5.5H20.1667"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M18.1867 5.69238L17.2792 18.4616C17.2501 18.9265 17.0437 19.3625 16.7026 19.6797C16.3615 19.997 15.9117 20.1712 15.4459 20.1666H6.55423C6.08955 20.1676 5.64141 19.9942 5.29841 19.6807C4.95749 19.3628 4.75091 18.9267 4.7209 18.4616L3.81335 5.69238"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M11 8.8916V17.1416"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M13.75 9.78027V16.1969"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M8.25 9.78027V16.1969"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M9.16671 1.83301H12.8334C13.3185 1.83661 13.7827 2.03091 14.1257 2.37395C14.4688 2.71699 14.6631 3.18122 14.6667 3.66634V5.49967H7.33337V3.66634C7.33697 3.18122 7.5313 2.71699 7.87434 2.37395C8.21738 2.03091 8.68159 1.83661 9.16671 1.83301V1.83301Z"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //         </svg>
-            //     )
+            // 
             // case 'exit':
             //     return (
             //         <svg width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions */
+import { Link } from "react-router-dom";
 import LoadSvgIcon from '../../utils/LoadSvgIcon'
 import manAvatar from '../../assets/images/man.svg'
 import womanAvatar from '../../assets/images/woman.svg'
-import Button from '../ui/button/Button'
 
 const UserInfo = ({ user }) => {
 
@@ -21,9 +21,11 @@ const UserInfo = ({ user }) => {
                 <img src={avatar(user)} className="w-14 h-14 object-cover" alt="avatar" />
                 <p className='text-base font-bold text-captionDark ml-2'>{user?.username}</p>
             </div>
-            <div className='p-1 cursor-pointer'>
-                <LoadSvgIcon name="edit" weight={2} />
-            </div>
+            <Link to={`/home/userEdit/${user?._id}`}>
+                <div className='p-1 cursor-pointer'>
+                    <LoadSvgIcon name="edit" weight={2} />
+                </div>
+            </Link>
         </div>
     )
 }
