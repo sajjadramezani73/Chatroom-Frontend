@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import UserInfo from "../components/userInfo/UserInfo";
+import Conversations from "../containers/conversations/Conversation";
 import { getIndex } from "../services/queries";
 import { addUser } from "../store/userSlice";
 
@@ -26,12 +27,12 @@ const Home = () => {
         }
     }, [])
 
-
     return (
         <div className="w-full h-full bg-captionLight flex justify-center items-center">
             <div className="w-[90%] h-[90%] flex gap-4">
-                <div className="bg-white w-[330px] min-w-[330px] rounded-md shadow p-4">
+                <div className="bg-white w-[330px] min-w-[330px] flex flex-col justify-between rounded-md shadow p-4">
                     <UserInfo user={user?.user} />
+                    <Conversations />
                 </div>
                 <div className="bg-white grow rounded-md shadow p-4">
                     <Outlet />

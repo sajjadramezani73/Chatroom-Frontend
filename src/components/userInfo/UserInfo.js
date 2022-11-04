@@ -8,13 +8,11 @@ import { baseUrl } from "../../constant";
 const UserInfo = ({ user }) => {
 
     const avatar = (user) => {
-
         if (user?.avatar !== '') {
             return baseUrl + '/' + user?.avatar
         } else {
             return user?.gender === "male" ? manAvatar : womanAvatar
         }
-
     }
     return (
         <div className="flex items-center justify-between pb-4 border-b-2">
