@@ -55,7 +55,7 @@ const UserEdit = () => {
     // delete profile user with send id user
     const deleteAvatarHandler = () => {
         setLoadingDel(true)
-        updateUser({ id: '636151a226ad3cfffb35409e', deleteAvatar: 1 })
+        updateUser({ id: userInfo?._id, deleteAvatar: 1 })
             .then(res => {
                 toast.success(res?.message)
                 dispatch(addUser(res.user))
