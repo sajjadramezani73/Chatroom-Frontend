@@ -10,12 +10,16 @@ const SignUp = () => {
     /********** state ************/
     const [userData, setUserData] = useState({
         username: '',
+        firstname: '',
+        lastname: '',
         password: '',
         confirmPassword: '',
         gender: ''
     });
     const [error, setError] = useState({
         username: true,
+        firstname: true,
+        lastname: true,
         password: true,
         confirmPassword: true,
         gender: true
@@ -30,7 +34,7 @@ const SignUp = () => {
     /********** state ************/
 
     useEffect(() => {
-        (error.username || error.password || error.confirmPassword || error.gender) ? setDisabled(true) : setDisabled(false)
+        (error.username || error.firstname || error.lastname || error.password || error.confirmPassword || error.gender) ? setDisabled(true) : setDisabled(false)
     }, [error])
 
 
@@ -38,6 +42,8 @@ const SignUp = () => {
         setLoading(true)
         signupUser({
             username: userData.username,
+            firstname: userData.firstname,
+            lastname: userData.lastname,
             password: userData.password,
             gender: userData.gender
         })
@@ -63,6 +69,26 @@ const SignUp = () => {
                 rule="required"
                 errorMessage="نام کاربری اجباری می باشد"
                 haveError={e => setError({ ...error, username: e })}
+            />
+            <Input
+                type='text'
+                placeholder="نام خود را وارد کنید"
+                iconName="user"
+                value={userData?.firstname}
+                onChange={e => setUserData({ ...userData, firstname: e.target.value })}
+                rule="required"
+                errorMessage="نام اجباری می باشد"
+                haveError={e => setError({ ...error, firstname: e })}
+            />
+            <Input
+                type='text'
+                placeholder="نام خانوادگی خود را وارد کنید"
+                iconName="user"
+                value={userData?.lastname}
+                onChange={e => setUserData({ ...userData, lastname: e.target.value })}
+                rule="required"
+                errorMessage="نام خانوادگی اجباری می باشد"
+                haveError={e => setError({ ...error, lastname: e })}
             />
             <Input
                 type='password'
