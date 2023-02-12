@@ -144,10 +144,6 @@ button:disabled {
   border-image: linear-gradient(-90deg, var(--color-captionDark), transparent) 1;
 }
 
-.signupLogin .linear-bg {
-  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)
-}
-
 .Toastify__toast {
   font-family: iranyekan !important;
   font-size: 14px;

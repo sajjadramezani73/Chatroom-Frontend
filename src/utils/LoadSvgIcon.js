@@ -175,29 +175,29 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
             //                 strokeLinejoin="round" />
             //         </svg>
             //     )
-            // case 'close-circle':
-            //     return (
-            //         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            //             <path
-            //                 d="M11.9999 22C14.3134 22 16.5554 21.1979 18.3438 19.7302C20.1323 18.2625 21.3565 16.2201 21.8078 13.951C22.2592 11.6819 21.9099 9.32651 20.8193 7.28613C19.7287 5.24574 17.9644 3.64664 15.827 2.76125C13.6895 1.87587 11.3112 1.759 9.09728 2.43057C6.88334 3.10213 4.97074 4.52057 3.68538 6.44421C2.40002 8.36784 1.82141 10.6776 2.04816 12.9801C2.2749 15.2825 3.29297 17.4351 4.92888 19.071C6.80422 20.9464 9.34773 22 11.9999 22V22Z"
-            //                 stroke={color}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M9 15L15 9"
-            //                 stroke={color}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M9 9L15 15"
-            //                 stroke={color}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //         </svg>
-            //     )
+            case 'close-circle':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9999 22C14.3134 22 16.5554 21.1979 18.3438 19.7302C20.1323 18.2625 21.3565 16.2201 21.8078 13.951C22.2592 11.6819 21.9099 9.32651 20.8193 7.28613C19.7287 5.24574 17.9644 3.64664 15.827 2.76125C13.6895 1.87587 11.3112 1.759 9.09728 2.43057C6.88334 3.10213 4.97074 4.52057 3.68538 6.44421C2.40002 8.36784 1.82141 10.6776 2.04816 12.9801C2.2749 15.2825 3.29297 17.4351 4.92888 19.071C6.80422 20.9464 9.34773 22 11.9999 22V22Z"
+                            stroke={color}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M9 15L15 9"
+                            stroke={color}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M9 9L15 15"
+                            stroke={color}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                )
             // case 'info':
             //     return (
             //         <svg width={size} height={size} viewBox="0 0 20 20" fill={fill} xmlns="http://www.w3.org/2000/svg">

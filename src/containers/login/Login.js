@@ -49,25 +49,27 @@ const Login = () => {
     }
 
     return (
-        <div className='mb-[60px]'>
+        <div className=''>
+            <div className="text-center">
+                <p className='text-2xl text-caption font-medium'>ورود به حساب</p>
+                <p className='text-tiny text-captionLight mt-2'>برای استفاده ابتدا وارد شوید</p>
+            </div>
             <Input
                 type='text'
-                placeholder="نام کاربری خود را وارد کنید"
+                placeholder="نام کاربری"
                 iconName="user"
                 value={userData?.username}
                 onChange={e => setUserData({ ...userData, username: e.target.value })}
                 rule="required"
-                errorMessage="نام کاربری اجباری می باشد"
                 haveError={e => setError({ ...error, username: e })}
             />
             <Input
                 type='password'
-                placeholder="رمز عبور خود را وارد کنید"
+                placeholder="رمز عبور"
                 iconName="passwordHide"
                 value={userData?.password}
                 onChange={e => setUserData({ ...userData, password: e.target.value })}
                 rule="required"
-                errorMessage="رمز عبور خود را وارد کنید"
                 haveError={e => setError({ ...error, password: e })}
             />
             <div className="mt-5">

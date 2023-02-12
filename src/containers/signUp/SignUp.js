@@ -60,14 +60,16 @@ const SignUp = () => {
 
     return (
         <Fragment>
+            <div className="text-center">
+                <p className='text-2xl text-caption font-medium'>ثبت حساب</p>
+                <p className='text-tiny text-captionLight mt-2'>اکنون حساب خود را ایجاد کنید</p>
+            </div>
             <Input
-                type='text'
                 placeholder="نام کاربری خود را وارد کنید"
                 iconName="user"
                 value={userData?.username}
                 onChange={e => setUserData({ ...userData, username: e.target.value })}
                 rule="required"
-                errorMessage="نام کاربری اجباری می باشد"
                 haveError={e => setError({ ...error, username: e })}
             />
             <Input
