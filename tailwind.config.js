@@ -3,13 +3,13 @@
 const plugin = require('tailwindcss/plugin');
 const colors = require("tailwindcss/colors");
 const customColors = {
-  primary: '#6E00FF',
-  primaryLight: '#F0DAFB',
-  caption: '#C1C1C1',
-  captionLight: '#F3F3F3',
-  captionDark: '#6C6C6C',
+  primary: '#0081B4',
+  primaryLight: '#059bd6',
+  caption: '#495057',
+  captionLight: '#797c8c',
+  // captionDark: '#6C6C6C',
   danger: '#FF3B3B',
-  light: '#F9F9F9',
+  light: '#e6e5e5',
   black: '#111111',
   body: '#181818',
 }
