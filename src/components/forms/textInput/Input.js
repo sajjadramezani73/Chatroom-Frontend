@@ -53,7 +53,7 @@ const Input = ({
 
     return (
         <>
-            <div className={`inputBox relative flex items-center border border-light h-12 rounded-md 
+            <div className={`inputBox relative flex items-center border border-light h-11 rounded-md 
                 ${disabled && 'opacity-60 bg-gray-50'}
                 ${validInput ? 'bg-gray-100' : 'bg-white'}
                 ${validInput === false ? 'border-danger' : ''}`}
@@ -65,13 +65,13 @@ const Input = ({
                         onChange={e => onChangeHandler(e.target.value)}
                         onBlur={validHandler}
                         onFocus={() => setFocusInput(true)}
-                        className="w-full h-full outline-none bg-transparent text-xs text-caption font-bold px-4"
+                        className="w-full h-full outline-none bg-transparent text-xs text-caption font-bold px-3"
                         disabled={disabled}
                         {...attributes}
                     />
                 </div>
-                <p className={`placeholder absolute right-3 text-xs text-captionLight px-2 pointer-events-none transition-all duration-300
-                    ${(focusInput || inputValue !== '') ? '-top-2 bg-white text-[11px]' : 'top-1/2 -translate-y-1/2'}`}>
+                <p className={`placeholder absolute right-3 text-xs text-captionLight pointer-events-none transition-all duration-300
+                    ${(focusInput || inputValue !== '') ? '-top-2 bg-white text-[11px] px-2' : 'top-1/2 -translate-y-1/2'}`}>
                     {placeholder}
                 </p>
                 {validInput === true && (
