@@ -16,14 +16,6 @@ const SignUp = () => {
         confirmPassword: '',
         gender: ''
     });
-    const [error, setError] = useState({
-        username: true,
-        firstname: true,
-        lastname: true,
-        password: true,
-        confirmPassword: true,
-        gender: true
-    });
     const [loading, setLoading] = useState(false);
     const [disabled, setDisabled] = useState(true);
     const [activeGender, setActiveGender] = useState('');
@@ -34,9 +26,13 @@ const SignUp = () => {
     /********** state ************/
 
     useEffect(() => {
-        (error.username || error.firstname || error.lastname || error.password || error.confirmPassword || error.gender) ? setDisabled(true) : setDisabled(false)
-    }, [error])
-
+        userData.username === '' ||
+            userData.firstname === '' ||
+            userData.lastname === '' ||
+            userData.password === '' ||
+            userData.confirmPassword === '' ||
+            userData.gender === '' ? setDisabled(true) : setDisabled(false)
+    }, [userData]);
 
     const signupHandler = () => {
         setLoading(true)
@@ -60,58 +56,57 @@ const SignUp = () => {
 
     return (
         <Fragment>
-            <div className="text-center">
+            <div className="text-center mb-12">
                 <p className='text-2xl text-caption font-medium'>ثبت حساب</p>
                 <p className='text-tiny text-captionLight mt-2'>اکنون حساب خود را ایجاد کنید</p>
             </div>
-            <Input
-                placeholder="نام کاربری خود را وارد کنید"
-                iconName="user"
-                value={userData?.username}
-                onChange={e => setUserData({ ...userData, username: e.target.value })}
-                rule="required"
-                haveError={e => setError({ ...error, username: e })}
-            />
-            <Input
-                type='text'
-                placeholder="نام خود را وارد کنید"
-                iconName="user"
-                value={userData?.firstname}
-                onChange={e => setUserData({ ...userData, firstname: e.target.value })}
-                rule="required"
-                errorMessage="نام اجباری می باشد"
-                haveError={e => setError({ ...error, firstname: e })}
-            />
-            <Input
-                type='text'
-                placeholder="نام خانوادگی خود را وارد کنید"
-                iconName="user"
-                value={userData?.lastname}
-                onChange={e => setUserData({ ...userData, lastname: e.target.value })}
-                rule="required"
-                errorMessage="نام خانوادگی اجباری می باشد"
-                haveError={e => setError({ ...error, lastname: e })}
-            />
-            <Input
-                type='password'
-                placeholder="رمز عبور خود را وارد کنید"
-                iconName="passwordHide"
-                value={userData?.password}
-                onChange={e => setUserData({ ...userData, password: e.target.value })}
-                rule="required"
-                errorMessage="رمز عبور خود را وارد کنید"
-                haveError={e => setError({ ...error, password: e })}
-            />
-            <Input
-                type='password'
-                placeholder="تکرار رمز عبور خود را وارد کنید"
-                iconName="passwordHide"
-                value={userData?.confirmPassword}
-                onChange={e => setUserData({ ...userData, confirmPassword: e.target.value })}
-                rule="required"
-                errorMessage="رمز عبور خود را وارد کنید"
-                haveError={e => setError({ ...error, confirmPassword: e })}
-            />
+            <div className="mb-4">
+                <Input
+                    placeholder="نام کاربری"
+                    iconName="user"
+                    value={userData?.username}
+                    onChange={e => setUserData({ ...userData, username: e.target.value })}
+                    rule="required"
+                />
+            </div>
+            <div className="grid grid-cols-2 gap-x-3 mb-4">
+                <Input
+                    type='text'
+                    placeholder="نام"
+                    iconName="user"
+                    value={userData?.firstname}
+                    onChange={e => setUserData({ ...userData, firstname: e.target.value })}
+                    rule="required"
+                />
+                <Input
+                    type='text'
+                    placeholder="نام خانوادگی"
+                    iconName="user"
+                    value={userData?.lastname}
+                    onChange={e => setUserData({ ...userData, lastname: e.target.value })}
+                    rule="required"
+                />
+            </div>
+            <div className="mb-4">
+                <Input
+                    type='password'
+                    placeholder="رمز عبور"
+                    iconName="passwordHide"
+                    value={userData?.password}
+                    onChange={e => setUserData({ ...userData, password: e.target.value })}
+                    rule="required"
+                />
+            </div>
+            <div className="mb-4">
+                <Input
+                    type='password'
+                    placeholder="تکرار رمز عبور "
+                    iconName="passwordHide"
+                    value={userData?.confirmPassword}
+                    onChange={e => setUserData({ ...userData, confirmPassword: e.target.value })}
+                    rule="required"
+                />
+            </div>
             <div className='flex items-center mt-3 pr-2'>
                 {genders.map(item => {
                     const checkedGender = item.id === activeGender ? true : false
@@ -122,7 +117,6 @@ const SignUp = () => {
                         onClick={() => {
                             setActiveGender(item.id)
                             setUserData({ ...userData, gender: item.id })
-                            setError({ ...error, gender: false })
                         }}
                     />
                 })}

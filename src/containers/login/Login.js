@@ -18,17 +18,13 @@ const Login = () => {
         username: '',
         password: ''
     });
-    const [error, setError] = useState({
-        username: true,
-        password: true
-    });
     const [loading, setLoading] = useState(false);
     const [disabled, setDisabled] = useState(true);
     /********** state ************/
 
     useEffect(() => {
-        (error.username || error.password) ? setDisabled(true) : setDisabled(false)
-    }, [error])
+        userData.username === '' || userData.password === '' ? setDisabled(true) : setDisabled(false)
+    }, [userData]);
 
     const loginHandler = () => {
         setLoading(true)
@@ -50,29 +46,31 @@ const Login = () => {
 
     return (
         <div className=''>
-            <div className="text-center">
+            <div className="text-center mb-12">
                 <p className='text-2xl text-caption font-medium'>ورود به حساب</p>
                 <p className='text-tiny text-captionLight mt-2'>برای استفاده ابتدا وارد شوید</p>
             </div>
-            <Input
-                type='text'
-                placeholder="نام کاربری"
-                iconName="user"
-                value={userData?.username}
-                onChange={e => setUserData({ ...userData, username: e.target.value })}
-                rule="required"
-                haveError={e => setError({ ...error, username: e })}
-            />
-            <Input
-                type='password'
-                placeholder="رمز عبور"
-                iconName="passwordHide"
-                value={userData?.password}
-                onChange={e => setUserData({ ...userData, password: e.target.value })}
-                rule="required"
-                haveError={e => setError({ ...error, password: e })}
-            />
-            <div className="mt-5">
+            <div className="mb-4">
+                <Input
+                    type='text'
+                    placeholder="نام کاربری"
+                    iconName="user"
+                    value={userData?.username}
+                    onChange={e => setUserData({ ...userData, username: e.target.value })}
+                    rule="required"
+                />
+            </div>
+            <div className="mb-4">
+                <Input
+                    type='password'
+                    placeholder="رمز عبور"
+                    iconName="passwordHide"
+                    value={userData?.password}
+                    onChange={e => setUserData({ ...userData, password: e.target.value })}
+                    rule="required"
+                />
+            </div>
+            <div className="pt-5">
                 <Button
                     active={true}
                     title="ورود"
