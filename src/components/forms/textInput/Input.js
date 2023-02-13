@@ -19,6 +19,7 @@ const Input = ({
     const [focusInput, setFocusInput] = useState(false);
     const [inputValue, setInputValue] = useState('')
     const [validInput, setValidInput] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
 
     useEffect(() => {
         setInputValue(value)
@@ -60,7 +61,7 @@ const Input = ({
             >
                 <div className='flex-grow h-full relative'>
                     <input
-                        type={type}
+                        type={type === 'password' ? (showPassword ? 'text' : 'password') : type}
                         value={inputValue}
                         onChange={e => onChangeHandler(e.target.value)}
                         onBlur={validHandler}
@@ -74,18 +75,27 @@ const Input = ({
                     ${(focusInput || inputValue !== '') ? '-top-2 bg-white text-[11px] px-2' : 'top-1/2 -translate-y-1/2'}`}>
                     {placeholder}
                 </p>
-                {validInput === true && (
+                {type === 'password' && (
                     <div className="w-10 min-w-[40px] h-full flex items-center justify-center">
-                        <span className=''>
-                            <LoadSvgIcon name="check" size={18} weight={1.5} color="var(--color-primary)" />
-                        </span>
-                    </div>
-                )}
-                {validInput === false && (
-                    <div className="w-10 min-w-[40px] h-full flex items-center justify-center">
-                        <span className=''>
-                            <LoadSvgIcon name="close-circle" size={18} weight={1.5} color="var(--color-danger)" />
-                        </span>
+                        {showPassword ? (
+                            <button onClick={() => setShowPassword(false)}>
+                                <LoadSvgIcon
+                                    name="passwordShow"
+                                    size={18}
+                                    weight={1.5}
+                                    color="var(--color-captionLight)"
+                                />
+                            </button>
+                        ) : (
+                            <button onClick={() => setShowPassword(true)}>
+                                <LoadSvgIcon
+                                    name="passwordHide"
+                                    size={18}
+                                    weight={1.5}
+                                    color="var(--color-captionLight)"
+                                />
+                            </button>
+                        )}
                     </div>
                 )}
             </div>
