@@ -14,7 +14,7 @@ const Input = ({
     haveError
 }) => {
 
-    const { validate } = useValidation()
+    // const { validate } = useValidation()
 
     const [focusInput, setFocusInput] = useState(false);
     const [inputValue, setInputValue] = useState('')
@@ -48,8 +48,8 @@ const Input = ({
 
     const validHandler = () => {
         setFocusInput(false)
-        const valid = validate({ rule: rule, value: inputValue })
-        setValidInput(valid.isValid)
+        // const valid = validate({ rule: rule, value: inputValue })
+        // setValidInput(valid.isValid)
     }
 
     return (
