@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import Logo from '../assets/images/logo.webp'
-import Button from '../components/ui/button/Button'
 import Login from '../containers/login/Login';
 import SignUp from '../containers/signUp/SignUp';
-import VectorWomen from '../assets/images/vector-woman.svg'
+import VectorWomen from '../assets/images/vector-social.svg'
 
 const SignupLogin = () => {
 

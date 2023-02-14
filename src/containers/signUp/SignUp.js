@@ -46,7 +46,7 @@ const SignUp = () => {
             .then(res => {
                 setLoading(false)
                 toast.success(res?.message)
-                setUserData({ username: '', password: '', confirmPassword: '', gender: '' })
+                setUserData({ username: '', firstname: '', lastname: '', password: '', confirmPassword: '', gender: '' })
                 setActiveGender('')
             }).catch(err => {
                 setLoading(false)
