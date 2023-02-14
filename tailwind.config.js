@@ -10,8 +10,9 @@ const customColors = {
   // captionDark: '#6C6C6C',
   danger: '#FF3B3B',
   light: '#e6e5e5',
-  black: '#111111',
-  body: '#181818',
+  grayLight: '#f2f8f8',
+  grayDark: '#363f48',
+  grayExtraDark: '#303942'
 }
 
 module.exports = {
