@@ -23,7 +23,7 @@ const ConversationItem = ({ item }) => {
             </div>
             <div className='pr-1.5 pl-2.5 grow overflow-hidden'>
                 <div className="flex justify-between items-center">
-                    <p className='text-sm font-medium text-body'>
+                    <p className='text-sm font-medium text-caption'>
                         {item?.username}
                     </p>
                     {/* <p className='text-xxs font-normal text-captionDark pt-1 ltr'>

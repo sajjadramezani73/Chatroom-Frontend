@@ -5,9 +5,9 @@ import Splash from '../../pages/Splash'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from '../../pages/Home';
-import PublicChat from '../../pages/PublicChat';
 import PrivateChat from '../../pages/PrivateChat';
 import UserEdit from '../../pages/UserEdit';
+import Wellcome from '../../pages/Wellcome';
 
 const Layout = () => {
     return (
@@ -15,7 +15,7 @@ const Layout = () => {
             <Routes>
                 <Route path="/" element={<Splash />} />
                 <Route path="/home" element={<Home />} >
-                    <Route index element={<PublicChat />} />
+                    <Route index element={<Wellcome />} />
                     <Route path="privateChat/:userId" element={<PrivateChat />} />
                     <Route path="userEdit/:userId" element={<UserEdit />} />
                 </Route>

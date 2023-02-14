@@ -27,14 +27,14 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="w-full h-full bg-captionLight flex justify-center items-center">
-            <div className="w-[90%] h-[90%] flex gap-4">
-                <div className="bg-white w-[330px] min-w-[330px] flex flex-col justify-between rounded-md shadow p-4">
-                    <Conversations />
-                </div>
-                <div className="bg-white grow rounded-md shadow p-4">
-                    <Outlet />
-                </div>
+        <div className="w-full h-full bg-captionLight flex items-stretch ">
+            <div className="flex">
+                <div className="w-[100px] min-w-[100px] bg-grayExtraDark"></div>
+                <div className="w-[320px] min-w-[320px] bg-grayDark"></div>
+                {/* <Conversations /> */}
+            </div>
+            <div className="bg-grayLight grow p-4">
+                <Outlet />
             </div>
         </div>
     )
