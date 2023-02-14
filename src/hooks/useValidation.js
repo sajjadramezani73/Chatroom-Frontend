@@ -19,32 +19,32 @@ const useValidation = () => {
         return Number(this).toLocaleString().split(/\s/).join(',')
     }
 
-    const validate = ({ rule, value, errorMessage }) => {
+    const validate = ({ rule, value }) => {
 
         switch (rule) {
             case 'mobile':
                 if (value.isMobile()) {
                     return {
-                        message: null
+                        isValid: true
                     }
                 } else {
                     return {
-                        message: errorMessage
+                        isValid: false
                     }
                 }
             case 'required':
-                if (value.trim().length >= 0) {
+                if (value.trim().length > 0) {
                     return {
-                        message: null
+                        isValid: true
                     }
                 } else {
                     return {
-                        message: errorMessage
+                        isValid: null
                     }
                 }
             default:
                 return {
-                    message: 'ولیدیشن یافت نشد'
+                    isValid: null
                 }
 
         }
