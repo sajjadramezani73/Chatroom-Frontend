@@ -9,6 +9,7 @@ const customColors = {
   captionLight: '#797c8c',
   // captionDark: '#6C6C6C',
   danger: '#FF3B3B',
+  greenCu: '#51d58c',
   light: '#e6e5e5',
   grayLight: '#f2f8f8',
   grayDark: '#363f48',
