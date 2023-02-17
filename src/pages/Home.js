@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import Conversations from "../containers/conversations/Conversation";
 import SidebarLinks from "../containers/sidebarLinks/SidebarLinks";
+import Avatar from "../containers/user/Avatar";
 import { getIndex } from "../services/queries";
 import { addUser } from "../store/userSlice";
-import { avatar } from "../utils/AvatarSet";
 import LoadSvgIcon from '../utils/LoadSvgIcon'
 
 const Home = () => {
@@ -42,9 +42,7 @@ const Home = () => {
                 <div className="w-[100px] min-w-[100px] bg-grayExtraDark">
                     <div className="h-full flex flex-col justify-between">
                         <div className="pt-20">
-                            <div className="w-16 h-16 rounded-full mx-auto overflow-hidden cursor-pointer">
-                                <img src={avatar(user)} alt="avatar" className="w-full h-full object-cover" />
-                            </div>
+                            <Avatar />
                             <div className="mt-16">
                                 <SidebarLinks />
                             </div>
