@@ -148,3 +148,41 @@ button:disabled {
   font-family: iranyekan !important;
   font-size: 14px;
 }
+
+/****** modal *********/
+
+@keyframes activeLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes activeRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.confirm-pan {
+  transition-delay: 2s;
+  transform: translateX(100%);
+  transition: all ease 0.3s;
+}
+
+.confirm-pan.activeLeft {
+  animation: activeLeft 0.2s forwards;
+}
+
+.confirm-pan.activeRight {
+  animation: activeRight 0.2s forwards;
+}
+
+/****** modal *********/
