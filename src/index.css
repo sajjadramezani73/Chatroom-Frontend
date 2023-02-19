@@ -186,3 +186,44 @@ button:disabled {
 }
 
 /****** modal *********/
+/****** swiper *********/
+.swiperSlider {
+  width: 100%;
+}
+
+.swiperSlider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiperSlider .swiper-scrollbar-drag {
+  background: #ffffffcd;
+}
+
+.avatarSlider .swiper-scrollbar {
+  top: 4px !important;
+}
+
+.avatarSlider .swiper-button-prev,
+.avatarSlider .swiper-button-next {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.avatarSlider:hover .swiper-button-prev,
+.avatarSlider:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.avatarSlider .swiper-button-prev:after,
+.avatarSlider .swiper-button-next:after {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffffcd;
+  transition: all 0.2s;
+}
+
+
+
+/****** swiper *********/
