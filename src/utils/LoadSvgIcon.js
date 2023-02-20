@@ -727,23 +727,33 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
             //         </svg>
             //     )
 
-            // case 'camera':
-            //     return (
-            //         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            //             <path
-            //                 d="M22 18.2222C22 18.6937 21.8084 19.1459 21.4675 19.4793C21.1265 19.8127 20.664 20 20.1818 20H3.81818C3.33597 20 2.87351 19.8127 2.53253 19.4793C2.19156 19.1459 2 18.6937 2 18.2222V8.44444C2 7.97295 2.19156 7.52076 2.53253 7.18737C2.87351 6.85397 3.33597 6.66667 3.81818 6.66667H7.45455L9.27273 4H14.7273L16.5455 6.66667H20.1818C20.664 6.66667 21.1265 6.85397 21.4675 7.18737C21.8084 7.52076 22 7.97295 22 8.44444V18.2222Z"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round" />
-            //             <path
-            //                 d="M11.9999 16.4445C14.0082 16.4445 15.6363 14.8526 15.6363 12.8889C15.6363 10.9253 14.0082 9.33337 11.9999 9.33337C9.99158 9.33337 8.36353 10.9253 8.36353 12.8889C8.36353 14.8526 9.99158 16.4445 11.9999 16.4445Z"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round" />
-            //         </svg>
-            //     )
+            case 'camera':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22 18.2222C22 18.6937 21.8084 19.1459 21.4675 19.4793C21.1265 19.8127 20.664 20 20.1818 20H3.81818C3.33597 20 2.87351 19.8127 2.53253 19.4793C2.19156 19.1459 2 18.6937 2 18.2222V8.44444C2 7.97295 2.19156 7.52076 2.53253 7.18737C2.87351 6.85397 3.33597 6.66667 3.81818 6.66667H7.45455L9.27273 4H14.7273L16.5455 6.66667H20.1818C20.664 6.66667 21.1265 6.85397 21.4675 7.18737C21.8084 7.52076 22 7.97295 22 8.44444V18.2222Z"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round" />
+                        <path
+                            d="M11.9999 16.4445C14.0082 16.4445 15.6363 14.8526 15.6363 12.8889C15.6363 10.9253 14.0082 9.33337 11.9999 9.33337C9.99158 9.33337 8.36353 10.9253 8.36353 12.8889C8.36353 14.8526 9.99158 16.4445 11.9999 16.4445Z"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round" />
+                    </svg>
+                )
+            case 'cameraPlus':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.5 17a4.5 4.5 0 1 0-4.5-4.5 4.505 4.505 0 0 0 4.5 4.5zm0-8a3.5 3.5 0 1 1-3.5 3.5A3.504 3.504 0 0 1 14.5 9zM8 9H4V8h4zm4 10.999V19h9a1.001 1.001 0 0 0 1-1V8a1.001 1.001 0 0 0-1-1h-1.5A1.502 1.502 0 0 1 18 5.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0-.5.5A1.502 1.502 0 0 1 9.5 7H7V6H5v1H3a1.001 1.001 0 0 0-1 1v8H1V8a2.002 2.002 0 0 1 2-2h1V5h4v1h1.5a.5.5 0 0 0 .5-.5A1.502 1.502 0 0 1 11.5 4h6A1.502 1.502 0 0 1 19 5.5a.5.5 0 0 0 .5.5H21a2.002 2.002 0 0 1 2 2v10a2.002 2.002 0 0 1-2 2zM6 23H5v-4.001H1V18h4v-4h1v4h4v.999H6z"
+                            stroke={color}
+                            strokeWidth={weight}
+                        />
+                        <path fill={fill} d="M0 0h24v24H0z" strokeWidth={weight} /></svg>
+                )
             // case 'picture':
             //     return (
             //         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
