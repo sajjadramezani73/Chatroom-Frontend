@@ -38,6 +38,26 @@ const InformationUser = ({ closeInfo, openEdit }) => {
                     </div>
                 )}
             </div>
+            <div className="py-8 px-4 grid gap-y-4 rtl">
+                <div className="flex items-center">
+                    <span>
+                        <LoadSvgIcon name="user" fill="var(--color-grayLight)" color="var(--color-grayLight)" />
+                    </span>
+                    <div className="pr-4">
+                        <p className='text-grayLight text-tiny'>{user?.username}</p>
+                        <p className='text-gray-500 text-sm font-bold'>نام کاربری</p>
+                    </div>
+                </div>
+                <div className="flex items-center">
+                    <span>
+                        <LoadSvgIcon name="info" fill="var(--color-grayLight)" color="var(--color-grayDark)" />
+                    </span>
+                    <div className="pr-4">
+                        <p className='text-grayLight text-tiny min-h-[20px]'>{user?.bio ? user?.bio : '_ _ _ _'}</p>
+                        <p className='text-gray-500 text-sm font-bold'>معرفی</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

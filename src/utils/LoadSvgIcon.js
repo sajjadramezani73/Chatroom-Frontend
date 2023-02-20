@@ -341,33 +341,32 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
             //             />
             //         </svg>
             //     )
-            // case 'info':
-            //     return (
-            //         <svg width={size} height={size} viewBox="0 0 22 22" fill={fill} xmlns="http://www.w3.org/2000/svg">
-            //             <path
-            //                 d="M10.9998 21C13.3134 21.0003 15.5555 20.1983 17.344 18.7307C19.1326 17.2632 20.3571 15.2209 20.8086 12.9518C21.2602 10.6827 20.911 8.32718 19.8205 6.28669C18.73 4.24619 16.9657 2.64696 14.8283 1.76145C12.6909 0.875941 10.3126 0.75896 8.09856 1.43045C5.88456 2.10195 3.97189 3.52036 2.68645 5.444C1.40102 7.36764 0.822405 9.67749 1.04913 11.98C1.27585 14.2824 2.29392 16.435 3.92986 18.071C5.80619 19.9443 8.34844 20.9975 10.9998 21V21Z"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M11 9.5V16.5"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
-            //             <path
-            //                 d="M11 6V7"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeMiterlimit="10"
-            //                 strokeLinecap="round"
-            //             />
-            //         </svg>
-
-            //     )
+            case 'info':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 22 22" fill={fill} xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.9998 21C13.3134 21.0003 15.5555 20.1983 17.344 18.7307C19.1326 17.2632 20.3571 15.2209 20.8086 12.9518C21.2602 10.6827 20.911 8.32718 19.8205 6.28669C18.73 4.24619 16.9657 2.64696 14.8283 1.76145C12.6909 0.875941 10.3126 0.75896 8.09856 1.43045C5.88456 2.10195 3.97189 3.52036 2.68645 5.444C1.40102 7.36764 0.822405 9.67749 1.04913 11.98C1.27585 14.2824 2.29392 16.435 3.92986 18.071C5.80619 19.9443 8.34844 20.9975 10.9998 21V21Z"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M11 9.5V16.5"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M11 6V7"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeMiterlimit="10"
+                            strokeLinecap="round"
+                        />
+                    </svg>
+                )
             case 'setting':
                 return (
                     <svg
