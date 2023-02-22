@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
+import Textarea from '../../components/forms/textarea/Textarea';
 import Input from '../../components/forms/textInput/Input';
 import { avatar } from '../../utils/AvatarSet'
 import LoadSvgIcon from '../../utils/LoadSvgIcon'
@@ -61,6 +62,17 @@ const EditUser = ({ closeEdit }) => {
                         value={userInfo?.lastname}
                         onChange={e => setUserInfo({ ...userInfo, lastname: e.target.value })}
                         rule="required"
+                        theme='dark'
+                    />
+                </div>
+                <div className="mt-8 w-full">
+                    <Textarea
+                        value={userInfo?.bio}
+                        iconName="comment"
+                        placeholder="متن نظر"
+                        rule="required"
+                        onChange={e => setUserInfo({ ...userInfo, bio: e.target.value })}
+                        attributes={{ rows: 8 }}
                         theme='dark'
                     />
                 </div>
