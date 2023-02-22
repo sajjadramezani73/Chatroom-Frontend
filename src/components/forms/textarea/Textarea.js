@@ -54,7 +54,7 @@ const Textarea = ({
                         onChange={e => onChangeHandler(e.target.value)}
                         onBlur={validHandler}
                         onFocus={() => setFocusInput(true)}
-                        className={`w-full h-full outline-none resize-none text-xxs text-body font-bold bg-transparent componentinput px-3
+                        className={`w-full h-full outline-none resize-none text-xs font-bold bg-transparent componentinput px-3
                         ${theme === 'light' ? 'text-caption' : 'text-grayLight'}`}
                         disabled={disabled}
                         {...attributes}
