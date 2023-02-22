@@ -63,7 +63,6 @@ const SignUp = () => {
             <div className="mb-4">
                 <Input
                     placeholder="نام کاربری"
-                    iconName="user"
                     value={userData?.username}
                     onChange={e => setUserData({ ...userData, username: e.target.value })}
                     rule="required"
@@ -73,7 +72,6 @@ const SignUp = () => {
                 <Input
                     type='text'
                     placeholder="نام"
-                    iconName="user"
                     value={userData?.firstname}
                     onChange={e => setUserData({ ...userData, firstname: e.target.value })}
                     rule="required"
@@ -81,7 +79,6 @@ const SignUp = () => {
                 <Input
                     type='text'
                     placeholder="نام خانوادگی"
-                    iconName="user"
                     value={userData?.lastname}
                     onChange={e => setUserData({ ...userData, lastname: e.target.value })}
                     rule="required"

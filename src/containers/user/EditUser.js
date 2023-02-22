@@ -36,7 +36,6 @@ const EditUser = ({ closeEdit }) => {
                     <Input
                         type='text'
                         placeholder="نام کاربری"
-                        iconName="user"
                         value={userInfo?.username}
                         onChange={e => setUserInfo({ ...userInfo, username: e.target.value })}
                         rule="required"
@@ -47,7 +46,6 @@ const EditUser = ({ closeEdit }) => {
                     <Input
                         type='text'
                         placeholder="نام"
-                        iconName="user"
                         value={userInfo?.firstname}
                         onChange={e => setUserInfo({ ...userInfo, firstname: e.target.value })}
                         rule="required"
@@ -58,7 +56,6 @@ const EditUser = ({ closeEdit }) => {
                     <Input
                         type='text'
                         placeholder="نام خانوادگی"
-                        iconName="user"
                         value={userInfo?.lastname}
                         onChange={e => setUserInfo({ ...userInfo, lastname: e.target.value })}
                         rule="required"
@@ -68,8 +65,7 @@ const EditUser = ({ closeEdit }) => {
                 <div className="mt-8 w-full">
                     <Textarea
                         value={userInfo?.bio}
-                        iconName="comment"
-                        placeholder="متن نظر"
+                        placeholder="درباره من"
                         rule="required"
                         onChange={e => setUserInfo({ ...userInfo, bio: e.target.value })}
                         attributes={{ rows: 8 }}

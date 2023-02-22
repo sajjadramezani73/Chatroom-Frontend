@@ -54,7 +54,6 @@ const Login = () => {
                 <Input
                     type='text'
                     placeholder="نام کاربری"
-                    iconName="user"
                     value={userData?.username}
                     onChange={e => setUserData({ ...userData, username: e.target.value })}
                     rule="required"
