@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import SidebarLinkItem from './SidebarLinkItem';
 
-const SidebarLinks = () => {
+const SidebarLinks = ({ changeLink }) => {
+
+    const [activeLink, setActiveLink] = useState('pvs');
     const [links] = useState([
         {
             title: 'مخاطبین',
@@ -22,7 +24,16 @@ const SidebarLinks = () => {
 
     return (
         links.map(link => {
-            return <SidebarLinkItem item={link} key={link.href} />
+            const active = link.href === activeLink
+            return <SidebarLinkItem
+                key={link.href}
+                item={link}
+                active={active}
+                cliked={() => {
+                    setActiveLink(link.href)
+                    changeLink(link.href)
+                }}
+            />
         })
     )
 }

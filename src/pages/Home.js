@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import Conversations from "../containers/conversations/Conversation";
@@ -8,6 +8,7 @@ import Avatar from "../containers/user/Avatar";
 import { getIndex } from "../services/queries";
 import { addUser } from "../store/userSlice";
 import LoadSvgIcon from '../utils/LoadSvgIcon'
+const Contects = lazy(() => import('../containers/contacts/Contacts'))
 
 const Home = () => {
 
@@ -15,6 +16,8 @@ const Home = () => {
     const navigate = useNavigate()
     const { user } = useSelector(store => store.user);
     console.log('user', user);
+
+    const [ss, setSs] = useState(false);
 
     useEffect(() => {
         if (user == null) {
@@ -44,7 +47,7 @@ const Home = () => {
                         <div className="pt-20">
                             <Avatar />
                             <div className="mt-16">
-                                <SidebarLinks />
+                                <SidebarLinks changeLink={value => setSs(!ss)} />
                             </div>
                         </div>
                         <span className="cursor-pointer flex justify-center py-6 hover:bg-grayDark duration-300"
@@ -54,7 +57,9 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="w-[320px] min-w-[320px] bg-grayDark"></div>
-                {/* <Conversations /> */}
+                <Suspense >
+                    {ss ? <Contects /> : <p>ssss</p>}
+                </Suspense>
             </div>
             <div className="bg-grayLight grow p-4">
                 <Outlet />
