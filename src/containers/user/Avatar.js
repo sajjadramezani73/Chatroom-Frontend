@@ -28,7 +28,6 @@ const Avatar = () => {
             <ConfirmModal
                 options={{
                     show: panels.userInfo,
-                    withBg: false,
                     position: 'left'
                     // setShow: () => setResultModal(false),
                 }}
@@ -41,7 +40,6 @@ const Avatar = () => {
             <ConfirmModal
                 options={{
                     show: panels.userEdit,
-                    withBg: false,
                     position: 'left'
                     // setShow: () => setResultModal(false),
                 }}
