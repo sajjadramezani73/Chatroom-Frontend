@@ -9,7 +9,7 @@ const SidebarLinkItem = ({ item, cliked, active }) => {
             onClick={cliked}
         >
             <span>
-                <LoadSvgIcon name={item.icon} fill="var(--color-grayLight)" color="var(--color-grayLight)" />
+                <LoadSvgIcon name={item.icon} fill="var(--color-light)" color="var(--color-light)" />
             </span>
         </div>
     )
