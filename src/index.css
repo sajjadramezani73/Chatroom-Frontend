@@ -121,13 +121,15 @@ button:disabled {
 }
 
 .no-scroll {
-  scrollbar-width: thin;
+  /* scrollbar-width: thin; */
+  scrollbar-width: none;
   scrollbar-color: #888 #f1f1f1;
   border-radius: 10px;
 }
 
 .no-scroll::-webkit-scrollbar {
-  width: 5px;
+  /* width: 5px; */
+  width: 0px;
 }
 
 .no-scroll::-webkit-scrollbar-track {
@@ -138,10 +140,6 @@ button:disabled {
 .no-scroll::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
-}
-
-.borderLinearColor {
-  border-image: linear-gradient(-90deg, var(--color-captionDark), transparent) 1;
 }
 
 .Toastify__toast {
@@ -223,7 +221,5 @@ button:disabled {
   color: #ffffffcd;
   transition: all 0.2s;
 }
-
-
 
 /****** swiper *********/
