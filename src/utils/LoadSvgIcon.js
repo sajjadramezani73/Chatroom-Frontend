@@ -89,44 +89,44 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
                         <path
                             d="M7.56048 19.9998C7.22184 19.9848 6.90247 19.838 6.67047 19.5909C6.43836 19.3451 6.31248 19.0178 6.32037 18.6798V18.6798C6.28693 17.6299 6.67154 16.6095 7.38959 15.8427C8.10764 15.0759 9.10054 14.6253 10.1504 14.5898H14.1904C15.2389 14.6275 16.2305 15.0766 16.9504 15.8398C17.3101 16.2172 17.5892 16.664 17.7704 17.1528C17.953 17.6405 18.038 18.1594 18.0204 18.6798V18.6798C18.0291 18.8467 18.0017 19.0135 17.9404 19.1689C17.8802 19.3239 17.7921 19.4666 17.6805 19.5898C17.4462 19.8397 17.1228 19.9871 16.7805 19.9998H7.56048Z"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                         <path
                             d="M12.1708 5.39065C12.5861 5.38905 12.9975 5.47066 13.3807 5.63065C13.7646 5.79131 14.1142 6.02381 14.4108 6.31565C14.7012 6.61045 14.932 6.95846 15.0907 7.34064C15.2499 7.72416 15.3314 8.13542 15.3307 8.55065V8.97065C15.3313 9.38652 15.2498 9.79841 15.0907 10.1827C14.935 10.5681 14.7034 10.9183 14.4097 11.2124C14.1159 11.5065 13.766 11.7385 13.3807 11.8946C12.9972 12.0533 12.5858 12.1336 12.1708 12.1307C11.7558 12.1305 11.3448 12.0497 10.9607 11.8926C10.5792 11.7346 10.2325 11.5029 9.94067 11.2107C9.34812 10.6154 9.01406 9.81057 9.01074 8.97065V8.55065C9.01321 7.71349 9.34761 6.91151 9.94067 6.32066C10.2315 6.02471 10.5787 5.78996 10.9617 5.63024C11.3447 5.47052 11.7558 5.38906 12.1708 5.39065V5.39065Z"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="square"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="square"
+                            strokeLinejoin="round"
                         />
                         <path
                             d="M16.3203 4.03031C16.9869 3.9493 17.6585 4.13511 18.1886 4.54723C18.7187 4.95935 19.0645 5.56434 19.1504 6.2303V6.2303C19.2228 6.68734 19.178 7.15526 19.0204 7.59031C18.8576 8.02509 18.5813 8.40837 18.2203 8.70031"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                         <path
                             d="M17.7305 11.9902H18.7605C19.6469 12.0203 20.4854 12.4 21.0925 13.0466C21.6997 13.6931 22.0261 14.5537 22.0005 15.4402V15.4402C22.0074 15.7278 21.9035 16.007 21.7104 16.2202C21.5114 16.4288 21.2385 16.5508 20.9504 16.5602H20.3805"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                         <path
                             d="M7.68015 4.03031C7.01358 3.9493 6.342 4.13511 5.81187 4.54723C5.28173 4.95935 4.93597 5.56434 4.85007 6.2303V6.2303C4.77771 6.68734 4.82244 7.15526 4.98008 7.59031C5.14286 8.02509 5.41914 8.40837 5.78013 8.70031"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                         <path
                             d="M6.28045 11.9902H5.24042C4.35401 12.0203 3.51554 12.4 2.90838 13.0466C2.30123 13.6931 1.9748 14.5537 2.00043 15.4402C1.99354 15.7278 2.09739 16.007 2.29046 16.2202C2.48947 16.4288 2.76238 16.5508 3.05047 16.5602H3.62042"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                     </svg>
                 )
@@ -538,25 +538,25 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
             //             </clipPath>
             //         </svg>
             //     )
-            // case 'search':
-            //     return (
-            //         <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            //             <path
-            //                 d='M10.0003 18C11.8511 17.9999 13.6447 17.3581 15.0754 16.1839C16.506 15.0097 17.4853 13.3757 17.8464 11.5605C18.2074 9.74517 17.9278 7.86087 17.0552 6.2286C16.1827 4.59633 14.7712 3.3171 13.0613 2.60887C11.3513 1.90064 9.4486 1.80723 7.67747 2.34455C5.90635 2.88187 4.37635 4.01668 3.34813 5.55563C2.3199 7.09457 1.85709 8.94243 2.03856 10.7844C2.22002 12.6263 3.03453 14.3483 4.3433 15.657C5.0862 16.3999 5.96813 16.9891 6.93876 17.3911C7.90939 17.7931 8.9497 18 10.0003 18Z'
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap='round'
-            //                 strokeLinejoin='round'
-            //             />
-            //             <path
-            //                 d='M22.0003 22L18.0003 18'
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap='round'
-            //                 strokeLinejoin='round'
-            //             />
-            //         </svg>
-            //     )
+            case 'search':
+                return (
+                    <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M10.0003 18C11.8511 17.9999 13.6447 17.3581 15.0754 16.1839C16.506 15.0097 17.4853 13.3757 17.8464 11.5605C18.2074 9.74517 17.9278 7.86087 17.0552 6.2286C16.1827 4.59633 14.7712 3.3171 13.0613 2.60887C11.3513 1.90064 9.4486 1.80723 7.67747 2.34455C5.90635 2.88187 4.37635 4.01668 3.34813 5.55563C2.3199 7.09457 1.85709 8.94243 2.03856 10.7844C2.22002 12.6263 3.03453 14.3483 4.3433 15.657C5.0862 16.3999 5.96813 16.9891 6.93876 17.3911C7.90939 17.7931 8.9497 18 10.0003 18Z'
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                        />
+                        <path
+                            d='M22.0003 22L18.0003 18'
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                        />
+                    </svg>
+                )
 
             // case 'doubleCheck':
             //     return (
@@ -632,16 +632,16 @@ const LoadSvgIcon = ({ name, size = 24, color = '#6C6C6C', weight = 1, fill = "n
                         <path
                             d="M17 9H1"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                         <path
                             d="M9 17L1 9L9 1"
                             stroke={color}
-                            stroke-width={weight}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         />
                     </svg>
                 )
