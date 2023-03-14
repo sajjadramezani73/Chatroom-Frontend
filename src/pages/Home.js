@@ -74,7 +74,7 @@ const Home = () => {
                             <LoadSvgIcon name="search" size={20} color="var(--color-light)" />
                         </div>
                     </div>
-                    <div className="p-4 flex-grow overflow-hidden overflow-y-auto no-scroll">
+                    <div className="p-4 flex-grow overflow-hidden overflow-y-auto no-scroll grid content-start gap-y-2">
                         <Suspense >
                             {ComponentLeader(selectedLink)}
                         </Suspense>
