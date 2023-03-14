@@ -5,6 +5,11 @@ export const getIndex = async () => {
     return res?.data;
 }
 
+export const getUsers = async () => {
+    const res = await service.get('/api/users')
+    return res?.data
+}
+
 export const signupUser = async (params) => {
     const res = await service.post(`/api/users/singup`, { ...params });
     return res?.data;
