@@ -10,7 +10,6 @@ const Textarea = ({
     onChange,
     disabled = false,
     attributes = {},
-    theme = 'light'
 }) => {
 
     // const { validate } = useValidation()
@@ -44,24 +43,21 @@ const Textarea = ({
 
     return (
         <>
-            <div className={`flex border rounded-md pt-2 relative
+            <div className={`flex border rounded-md pt-2 border-light bg-white relative
             ${disabled && 'opacity-60 bg-gray-50'}
-            ${validInput ? 'bg-gray-100' : ''}
-            ${theme === 'light' ? 'border-captionLight bg-white' : 'border-grayLight bg-grayDark'}`}>
+            ${validInput ? 'bg-gray-100' : ''}`}>
                 <div className={`flex-grow h-full relative`}>
                     <textarea
                         value={inputValue}
                         onChange={e => onChangeHandler(e.target.value)}
                         onBlur={validHandler}
                         onFocus={() => setFocusInput(true)}
-                        className={`w-full h-full outline-none resize-none text-xs font-bold bg-transparent componentinput px-3
-                        ${theme === 'light' ? 'text-caption' : 'text-grayLight'}`}
+                        className={`w-full h-full outline-none resize-none text-xs font-bold text-caption bg-transparent componentinput px-3`}
                         disabled={disabled}
                         {...attributes}
                     ></textarea>
                 </div>
-                <p className={`placeholder absolute right-3 text-xs  pointer-events-none transition-all duration-300
-                    ${theme === 'light' ? 'text-captionLight bg-white' : 'text-grayLight bg-grayDark'}
+                <p className={`placeholder absolute right-3 text-xs text-captionLight bg-white pointer-events-none transition-all duration-300
                     ${(focusInput || inputValue !== '') ? '-top-2 text-[11px] px-2' : 'top-2'}`}>
                     {placeholder}
                 </p>

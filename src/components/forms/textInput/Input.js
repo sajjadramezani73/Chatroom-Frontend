@@ -12,7 +12,6 @@ const Input = ({
     disabled = false,
     attributes = {},
     haveError,
-    theme = 'light'
 }) => {
 
     // const { validate } = useValidation()
@@ -55,11 +54,10 @@ const Input = ({
 
     return (
         <>
-            <div className={`inputBox relative flex items-center border h-11 rounded-md 
+            <div className={`inputBox relative flex items-center border h-11 rounded-md border-light bg-white
                 ${disabled && 'opacity-60 bg-gray-50'}
                 ${validInput ? 'bg-gray-100' : ''}
-                ${validInput === false ? 'border-danger' : ''}
-                ${theme === 'light' ? 'border-light bg-white' : 'border-grayLight bg-grayDark'}`}
+                ${validInput === false ? 'border-danger' : ''}`}
             >
                 <div className='flex-grow h-full relative'>
                     <input
@@ -68,14 +66,12 @@ const Input = ({
                         onChange={e => onChangeHandler(e.target.value)}
                         onBlur={validHandler}
                         onFocus={() => setFocusInput(true)}
-                        className={`w-full h-full outline-none bg-transparent text-xs font-bold px-3
-                        ${theme === 'light' ? 'text-caption' : 'text-grayLight'}`}
+                        className={`w-full h-full outline-none bg-transparent text-xs font-bold px-3 text-caption`}
                         disabled={disabled}
                         {...attributes}
                     />
                 </div>
-                <p className={`placeholder absolute right-3 text-xs  pointer-events-none transition-all duration-300
-                    ${theme === 'light' ? 'text-captionLight bg-white' : 'text-grayLight bg-grayDark'}
+                <p className={`placeholder absolute right-3 text-xs text-captionLight bg-white pointer-events-none transition-all duration-300
                     ${(focusInput || inputValue !== '') ? '-top-2 text-[11px] px-2' : 'top-1/2 -translate-y-1/2'}`}>
                     {placeholder}
                 </p>

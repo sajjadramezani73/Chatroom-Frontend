@@ -85,13 +85,13 @@ const EditUser = ({ closeEdit }) => {
     }
 
     return (
-        <div className="bg-grayDark h-full">
+        <div className="bg-white h-full">
             <div className="flex justify-between items-center px-4 py-4">
                 <div className="flex items-center">
                     <span className='cursor-pointer' onClick={closeEdit}>
-                        <LoadSvgIcon name="backArrow" color="var(--color-grayLight)" weight={1.5} size={18} />
+                        <LoadSvgIcon name="backArrow" color="var(--color-caption)" weight={1.5} size={18} />
                     </span>
-                    <p className='text-grayLight text-sm ml-4'>ویرایش اطلاعات</p>
+                    <p className='text-caption text-sm ml-4'>ویرایش اطلاعات</p>
                 </div>
             </div>
             <div className="flex flex-col items-center px-4">
@@ -117,7 +117,6 @@ const EditUser = ({ closeEdit }) => {
                         value={userInfo?.username}
                         onChange={e => setUserInfo({ ...userInfo, username: e.target.value })}
                         rule="required"
-                        theme='dark'
                     />
                 </div>
                 <div className="mt-8 w-full">
@@ -127,7 +126,6 @@ const EditUser = ({ closeEdit }) => {
                         value={userInfo?.firstname}
                         onChange={e => setUserInfo({ ...userInfo, firstname: e.target.value })}
                         rule="required"
-                        theme='dark'
                     />
                 </div>
                 <div className="mt-8 w-full">
@@ -137,7 +135,6 @@ const EditUser = ({ closeEdit }) => {
                         value={userInfo?.lastname}
                         onChange={e => setUserInfo({ ...userInfo, lastname: e.target.value })}
                         rule="required"
-                        theme='dark'
                     />
                 </div>
                 <div className="mt-8 w-full">
@@ -147,7 +144,6 @@ const EditUser = ({ closeEdit }) => {
                         rule="required"
                         onChange={e => setUserInfo({ ...userInfo, bio: e.target.value })}
                         attributes={{ rows: 8 }}
-                        theme='dark'
                     />
                 </div>
                 {showBtnSave && (
